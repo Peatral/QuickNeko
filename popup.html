@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="tooltip.css">
+		<link rel="stylesheet" href="blackscrollbar.css">
+		<link rel="stylesheet" href="modalbottomsheet.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="popup.js"></script>
+		<script src="fontawesome.js"></script>
+		<style>
+			body {
+				height: 430px;
+			}
+
+			.baritem {
+				height:100%
+			}
+
+			.fab {
+				font-size: large
+			}
+		</style>
+	</head>
+	<body class="w3-black">
+		<div id="modal" class="w3-modal">
+			<div class="w3-modal-content w3-animate-top">
+			  	<div class="w3-container w3-white">
+					<span id="modalclose" class="w3-button w3-display-topright">&times;</span>
+					<p class="w3-center">Click Image to go to the next</p>
+				  </div>
+				  <div class="w3-light-grey">
+					<div id="modalcloseprogress" class="w3-blue" style="height:5px;width:0%"></div>
+				</div>
+			</div>
+		</div>
+
+		<img id="neko" alt="neko" src="nekosLife.png" style="object-fit:cover;height:100%">
+
+		<div id="modalbottomsheet" class="modalbottomsheet">
+			<div class="modalbottomsheet-content">
+				<div class="modalbottomsheet-header w3-black">
+					<span id="closemodalbottomsheet" class="close">&times;</span>
+					<h2>Quick Neko</h2>
+				</div>
+				<div class="w3-white w3-container">
+					<p class="w3-justify">This extension fetches random images from nekos.life from the selected category and displays them.</p>
+				</div>
+				<div class="w3-black w3-center w3-padding-16">
+					<a title="YouTube" target="_blank" href="http://www.youtube.com/channel/UCbvyOKq8tS9_GaI9GDEkaZA"><i class="fab fa-youtube w3-hover-opacity"></i></a>
+					<a title="Steam" target="_blank" href="http://steamcommunity.com/id/peatral"><i class="fab fa-steam w3-hover-opacity"></i></a>
+					<a title="Reddit" target="_blank" href="http://reddit.com/u/Peatral"><i class="fab fa-reddit w3-hover-opacity"></i></a>
+					<a title="Twitter" target="_blank" href="https://twitter.com/TheRealPeatral"><i class="fab fa-twitter w3-hover-opacity"></i></a>
+					<a title="Twitch" target="_blank" href="https://twitch.tv/Peatral"><i class="fab fa-twitch w3-hover-opacity"></i></a>
+					<a title="Github" target="_blank" href="https://github.com/Peatral"><i class="fab fa-github w3-hover-opacity"></i></a>
+					
+					<p class="w3-medium">©2020 Christof Reimers | Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+				</div>
+			</div>
+		  
+		</div>
+		<div class="w3-cell-row" style="width:100%">
+			<button title="Change Mode" class="w3-button w3-cell baritem" style="width:50%" id="swapMode">NSFW</button>
+			<select class="w3-select w3-cell baritem" style="width:50%" name="nekos" id="nekoSelect"></select>
+			
+			<a title="Toggle Slideshow" class="w3-button w3-cell baritem" style="width:10%" id="toggleSlides"><i class="fa fa-step-forward"></i></a>
+			<a title="nekos.life" class="w3-button w3-cell baritem" style="width:10%" target="_blank" href="https://nekos.life"><i class="fa fa-home"></i></a>
+			<a title="Informations" class="w3-button w3-cell baritem" style="width:10%" id="info"><i class="fa fa-info"></i></a>
+		</div>
+	</body>
+</html>
